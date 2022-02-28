@@ -90,7 +90,7 @@ The default colors present in the `BadgeColor` class are:-
 [GlideToVectorYou](https://github.com/corouteam/GlideToVectorYou)
 
 ## Coming in the future
-Different types of badges will be available in the future. You can see the available types below.
+Different types of badges will be available in the future. You can see those below.
 
 <img width="239" alt="image" src="https://user-images.githubusercontent.com/97180951/155988758-3a31a0b0-4153-4a50-a812-9c326347fc34.png">
 
