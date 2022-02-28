@@ -9,6 +9,7 @@
     <com.sambhav2358.badgegeneratorlibrary.Badge
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:badgeMessage="tru"/>
+        app:badgeMessage="tru"
+        app:badgeColor="badgeColorBlue"/>
 
 </LinearLayout>

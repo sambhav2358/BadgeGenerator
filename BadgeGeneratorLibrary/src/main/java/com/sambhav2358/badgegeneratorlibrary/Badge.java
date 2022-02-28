@@ -21,51 +21,59 @@ public class Badge extends AppCompatImageView {
     private final String spaceReplaceText = "%20";
     TypedArray a;
 
-    public Badge(Context c, AttributeSet attrs) {
+    public Badge(Context c){
         super(c);
+        init(c);
+    }
+
+    private void init(Context c){
         a = c.getTheme().obtainStyledAttributes(
-                attrs,
+                null,
                 R.styleable.Badge,
                 0, 0);
         String badgeLabel;
         String badgeMessage;
+        String badgeColor;
         try {
             badgeLabel = a.getString(R.styleable.Badge_badgeLabel) != null ? a.getString(R.styleable.Badge_badgeLabel).replaceAll(" ",spaceReplaceText) : "Label";
             badgeMessage = a.getString(R.styleable.Badge_badgeMessage) != null ? a.getString(R.styleable.Badge_badgeMessage).replaceAll(" ",spaceReplaceText) : "Message";
-//            String badgeColor = a.getString(R.styleable.Badge_badgeColor) != null ? a.getString(R.styleable.Badge_badgeColor) : "#000";
+            badgeColor = a.getString(R.styleable.Badge_badgeColor) != null ? a.getString(R.styleable.Badge_badgeColor) : "#000";
         } finally {
             a.recycle();
         }
         GlideToVectorYou
                 .init()
                 .with(c)
-                .withListener(new GlideToVectorYouListener() {
-                    @Override
-                    public void onLoadFailed() {
-                        Toast.makeText(c, "Load failed", Toast.LENGTH_SHORT).show();
-                    }
+                .load(Uri.parse(startUrl + badgeLabel.replaceAll(" ",spaceReplaceText) + "-" + badgeMessage.replaceAll(" ",spaceReplaceText) + "-" + badgeColor), this);
+    }
 
-                    @Override
-                    public void onResourceReady() {
-                        Toast.makeText(c, "Image ready", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .load(Uri.parse(startUrl + badgeLabel.replaceAll(" ",spaceReplaceText) + "-" + badgeMessage.replaceAll(" ",spaceReplaceText) + "-" + color), this);
+    public Badge(Context c, AttributeSet attrs) {
+        super(c);
+        init(c);
     }
 
     public void setLabel(String label){
         this.label = label;
-//        Glide.with(this).load(startUrl + label.replaceAll(" ",spaceReplaceText) + "-" + message.replaceAll(" ",spaceReplaceText) + "-" + color).into(this);
+        GlideToVectorYou
+                .init()
+                .with(this.getContext())
+                .load(Uri.parse(startUrl + label.replaceAll(" ",spaceReplaceText) + "-" + message.replaceAll(" ",spaceReplaceText) + "-" + color), this);
     }
 
-    public void setMessage(String message){
+    public void setMessage(String message) {
         this.message = message;
-//        Glide.with(this).load(startUrl + label.replaceAll(" ",spaceReplaceText) + "-" + message.replaceAll(" ",spaceReplaceText) + "-" + color).into(this);
+        GlideToVectorYou
+                .init()
+                .with(this.getContext())
+                .load(Uri.parse(startUrl + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color), this);
     }
 
-    public void setColor(String color){
+    public void setColor(String color) {
         this.color = color;
-//        Glide.with(this).load(startUrl + label.replaceAll(" ",spaceReplaceText) + "-" + message.replaceAll(" ",spaceReplaceText) + "-" + color).into(this);
+        GlideToVectorYou
+                .init()
+                .with(this.getContext())
+                .load(Uri.parse(startUrl + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color), this);
     }
 
     public String getLabel() {
