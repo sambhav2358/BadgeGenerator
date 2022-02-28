@@ -5,16 +5,6 @@
 
         <attr name="badgeLabel" format="string"/>
         <attr name="badgeMessage" format="string"/>
-        <attr name="badgeTint" format="enum">
-<!--            <enum name="badgeColorBlue" value="blue"/>-->
-<!--            <enum name="badgeColorBrightGreen" value="brightgreen"/>-->
-<!--            <enum name="badgeColorGreen" value="green"/>-->
-<!--            <enum name="badgeColorYellowGreen" value="yellowgreen"/>-->
-<!--            <enum name="badgeColorYellow" value="yellow"/>-->
-<!--            <enum name="badgeColorOrange" value="orange"/>-->
-<!--            <enum name="badgeColorRed" value="red"/>-->
-<!--            <enum name="badgeColorLightGrey" value="lightgrey"/>-->
-        </attr>
 
     </declare-styleable>
     
