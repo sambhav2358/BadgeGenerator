@@ -4,12 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <com.sambhav2358.badgegeneratorlibrary.Badge
+        android:id="@+id/badge"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:badgeMessage="tru"
-        app:badgeColor="badgeColorBlue"/>
+        android:layout_height="0dp"
+        app:badgeMessage="This is a sample message"
+        app:badgeLabel="This is a sample label"
+        android:layout_weight="1"/>
+
+    <EditText
+        android:id="@+id/labelED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the label here."/>
+
+    <EditText
+        android:id="@+id/messageED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the message here."/>
+
+    <EditText
+        android:id="@+id/colorED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the color here."/>
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DONE"/>
 
 </LinearLayout>
