@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sambhav2358.badgegeneratorlibrary">
+    package="com.sambhav2358.badgegeneratorlibrary"
+    >
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
