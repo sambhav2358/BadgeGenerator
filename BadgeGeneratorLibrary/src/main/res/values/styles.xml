@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="Badge">
+
+        <attr name="badgeLabel" format="string"/>
+        <attr name="badgeMessage" format="string"/>
+<!--        <attr name="badgeColor" format="enum">-->
+<!--            <enum name="blue" value="blue"/>-->
+<!--            <enum name="brightGreen" value="brightgreen"/>-->
+<!--            <enum name="green" value="green"/>-->
+<!--            <enum name="yellowGreen" value="yellowgreen"/>-->
+<!--            <enum name="yellow" value="yellow"/>-->
+<!--            <enum name="orange" value="orange"/>-->
+<!--            <enum name="red" value="red"/>-->
+<!--            <enum name="lightGrey" value="lightgrey"/>-->
+<!--        </attr>-->
+
+    </declare-styleable>
+    
+</resources>
