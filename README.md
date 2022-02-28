@@ -9,7 +9,7 @@ Well, to do this, just use this library.
   [![API](https://img.shields.io/github/v/release/sambhav2358/BadgeGenerator.svg)](https://img.shields.io/github/v/release/sambhav2358/BadgeGenerator.svg)
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sambhav2358/BadgeGenerator">
   <a href="https://jitpack.io/#sambhav2358/BadgeGenerator"><img src="https://jitpack.io/v/sambhav2358/BadgeGenerator/month.svg"/></a>
-  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.2"/>
+  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.3"/>
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/sambhav2358/BadgeGenerator?color=blue">
   <a href="https://github.com/sambhav2358/BadgeGenerator/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/sambhav2358/BadgeGenerator?label=Forks"></a>
   <a href="https://github.com/sambhav2358/BadgeGenerator/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/sambhav2358/BadgeGenerator?label=Stars"></a>
