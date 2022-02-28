@@ -9,7 +9,7 @@ Well, to do this, just use this library.
   [![API](https://img.shields.io/github/v/release/sambhav2358/BadgeGenerator.svg)](https://img.shields.io/github/v/release/sambhav2358/BadgeGenerator.svg)
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sambhav2358/BadgeGenerator">
   <a href="https://jitpack.io/#sambhav2358/BadgeGenerator"><img src="https://jitpack.io/v/sambhav2358/BadgeGenerator/month.svg"/></a>
-  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.1"/>
+  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.2"/>
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/sambhav2358/BadgeGenerator?color=blue">
   <a href="https://github.com/sambhav2358/BadgeGenerator/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/sambhav2358/BadgeGenerator?label=Forks"></a>
   <a href="https://github.com/sambhav2358/BadgeGenerator/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/sambhav2358/BadgeGenerator?label=Stars"></a>
@@ -84,7 +84,15 @@ The default colors present in the `BadgeColor` class are:-
 
 ## Thanks to
 [Shields.io](https://shields.io)
+
+
+
 [GlideToVectorYou](https://github.com/corouteam/GlideToVectorYou)
+
+## Coming in the future
+Different types of badges will be available in the future. You can see those below. Currently only plastic is supported
+
+<img width="239" alt="image" src="https://user-images.githubusercontent.com/97180951/155988758-3a31a0b0-4153-4a50-a812-9c326347fc34.png">
 
 ## Feature request
 For everyone who wants me to add a feature, just create an issue with the feature you want.
