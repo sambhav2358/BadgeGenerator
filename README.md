@@ -24,6 +24,10 @@ Well, to do this, just use this library.
 
 https://user-images.githubusercontent.com/97180951/155985789-4fcd3271-40a6-4862-9ed5-978c79159da2.mp4
 
+## Recently added features
+
+<img width="237" alt="image" src="https://user-images.githubusercontent.com/97180951/156022374-ae4c3834-c750-4930-aa14-2ed24aab1131.png">
+Now you can make the following type of badges with this library.
   
 ## Implementation
 
@@ -88,11 +92,6 @@ The default colors present in the `BadgeColor` class are:-
 
 
 [GlideToVectorYou](https://github.com/corouteam/GlideToVectorYou)
-
-## Coming in the future
-Different types of badges will be available in the future. You can see those below. Currently only plastic is supported
-
-<img width="239" alt="image" src="https://user-images.githubusercontent.com/97180951/155988758-3a31a0b0-4153-4a50-a812-9c326347fc34.png">
 
 ## Feature request
 For everyone who wants me to add a feature, just create an issue with the feature you want.
