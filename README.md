@@ -84,7 +84,9 @@ The default colors present in the `BadgeColor` class are:-
 
 ## Thanks to
 [Shields.io](https://shields.io)
-<b>
+
+
+
 [GlideToVectorYou](https://github.com/corouteam/GlideToVectorYou)
 
 ## Feature request
