@@ -68,7 +68,14 @@ NOTE: This libraray does not support to change the badge color from xml.
 binding.badge.setColor(binding.colorED.getText().toString());
 binding.badge.setMessage(binding.messageED.getText().toString());
 binding.badge.setLabel(binding.labelED.getText().toString());
+binding.badge.setType(BadgeType.social);
 ```
+
+If you want to get the input from edittext or something for the type, you can do like this
+```
+binding.badge.setType(BadgeType.startText + ed.getText().toString());
+```
+
 This is ideal for when you are getting the text from editext or so. But you are making it in the java without modification, you are prefered to use the `BadgeColor` class for the colors.
 
 Something like this
