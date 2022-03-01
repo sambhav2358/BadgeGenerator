@@ -30,7 +30,6 @@ public class Badge extends AppCompatImageView {
     private final String colorReplaceText = "%23";
     private boolean isStyle = true;
     private boolean isLogo = false;
-    private boolean isLink = false;
 
     private void init(Context c){
         TypedArray values = c.getTheme().obtainStyledAttributes(
@@ -143,13 +142,11 @@ public class Badge extends AppCompatImageView {
 
     public void setLink(String link) {
         if (link.trim().equals( "" )) {
-            isLink = false;
             setOnClickListener(null);
             return;
         }
         if (!link.contains("https://") || !link.contains("http://")) this.link = "http://" + link;
         else this.link = link;
-        isLink = true;
         setOnClickListener(v -> {
             CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
             CustomTabsIntent customTabsIntent = builder.build();
