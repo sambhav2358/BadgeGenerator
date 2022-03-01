@@ -142,6 +142,11 @@ public class Badge extends AppCompatImageView {
 //    }
 
     public void setLink(String link) {
+        if (link.trim().equals( "" )) {
+            isLink = false;
+            setOnClickListener(null);
+            return;
+        }
         if (!link.contains("https://") || !link.contains("http://")) this.link = "http://" + link;
         else this.link = link;
         isLink = true;
@@ -150,11 +155,6 @@ public class Badge extends AppCompatImageView {
             CustomTabsIntent customTabsIntent = builder.build();
             customTabsIntent.launchUrl(getContext(), Uri.parse(this.link));
         });
-        if (link.trim().equals( "" )) {
-            isLink = false;
-            setOnClickListener(null);
-            return;
-        }
         GlideToVectorYou
                 .init()
                 .with(getContext())
