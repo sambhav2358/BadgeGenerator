@@ -76,6 +76,11 @@ If you want to get the input from edittext or something for the type, you can do
 binding.badge.setType(BadgeType.startText + ed.getText().toString());
 ```
 
+You can now also add redirect links. In this, you provide the link, and then it will open the browser and you can view the webpage. You can provide a url like this.
+```
+binding.badge.setLink("https://stackoverflow.com");
+```
+
 This is ideal for when you are getting the text from editext or so. But you are making it in the java without modification, you are prefered to use the `BadgeColor` class for the colors.
 
 Something like this
@@ -106,7 +111,7 @@ All the logos will be suppoted only from [this](https://simpleicons.org/) websit
 
 - [ ] (Change logo color)
 - [ ] (Change logo width and height)
-- [ ] (Add a redirect link
+- [X] (Add a redirect link
 - [ ] (Change the color of the label)
 - [ ] (Download the badge)
 
