@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init(){
+        binding.badge.setLink("slither.io");
         binding.done.setOnClickListener(v -> {
             binding.badge.setColor(binding.colorED.getText().toString());
             binding.badge.setMessage(binding.messageED.getText().toString());
