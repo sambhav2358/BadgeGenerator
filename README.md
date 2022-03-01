@@ -109,8 +109,6 @@ The default colors present in the `BadgeColor` class are:-
 
 All the logos will be suppoted only from [this](https://simpleicons.org/) website
 
-- [ ] (Change logo color)
-- [ ] (Change logo width and height)
 - [X] (Add a redirect link
 - [ ] (Change the color of the label)
 - [ ] (Download the badge)
