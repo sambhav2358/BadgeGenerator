@@ -9,6 +9,7 @@ public class BadgeColor {
     public static final String red = "red";
     public static final String lightGrey = "lightgrey";
     public static final String blue = "blue";
+    // added more colors from here
     public static final String success = "success";
     public static final String important = "important";
     public static final String critical = "critical";
