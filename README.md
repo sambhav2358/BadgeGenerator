@@ -91,6 +91,19 @@ The default colors present in the `BadgeColor` class are:-
 7. lightGrey
 8. blue
 
+## Coming in the future
+- [ ] (Add a logo )
+![image](https://user-images.githubusercontent.com/97180951/156128379-bf486305-afb1-4bd1-9e30-13ccc427ce02.png)
+
+All the logos will be suppoted only from [this](https://simpleicons.org/) website
+
+- [ ] (Change logo color)
+- [ ] (Change logo width and height)
+- [ ] (Add a redirect link
+- [ ] (Change the color of the label)
+- [ ] (Download the badge)
+
+
 ## Thanks to
 [Shields.io](https://shields.io)
 
