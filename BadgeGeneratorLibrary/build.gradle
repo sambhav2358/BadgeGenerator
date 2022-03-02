@@ -34,4 +34,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.github.corouteam:GlideToVectorYou:v2.0.0'
     implementation "androidx.browser:browser:1.4.0"
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }
