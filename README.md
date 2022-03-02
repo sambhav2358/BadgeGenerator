@@ -81,9 +81,27 @@ You can now also add redirect links. In this, you provide the link, and then it 
 binding.badge.setLink("https://stackoverflow.com");
 ```
 
+You can also add a logo now(Added on 2 March 2022)
+```
+binding.badge.setLogo("anta");
+```
+All the logos will be suppoted only from [this](https://simpleicons.org/) and [this](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md) website
+
 This is ideal for when you are getting the text from editext or so. But you are making it in the java without modification, you are prefered to use the `BadgeColor` class for the colors.
 
-Something like this
+Also you can modify the tint of the logo like this
+```
+binding.badge.setLogoColor("aaa");
+// You can also use the predefined ones like this
+binding.badge.setLogoColor(BadgeColor.yellow);
+```
+
+Also you can change the width of the logo like this
+```
+binding.badge.setLogoWidth("40");
+```
+
+You can change the background color of the right side part or the message part Something like this
 ```
 binding.badge.setColor(BadgeColor.blue);
 ```
@@ -103,15 +121,30 @@ The default colors present in the `BadgeColor` class are:-
 7. lightGrey
 8. blue
 
+## Downloading the badge
+
+Also sometimes you might want to save the badge. You can save it the following types
+* Png
+* SVG
+ Downloading SVG
+ ```
+ binding.badge.downloadBadgeSVG(Environment.DIRECTORY_PICTURES);
+ ```
+ 
+ Download PNG
+ ```
+ binding.badge.downloadBadgePNG(Environment.DIRECTORY_PICTURES);
+ ```
+
 ## Coming in the future
-- [ ] (Add a logo )
+- [X] (Add a logo )
 ![image](https://user-images.githubusercontent.com/97180951/156128379-bf486305-afb1-4bd1-9e30-13ccc427ce02.png)
 
-All the logos will be suppoted only from [this](https://simpleicons.org/) website
+All the logos will be suppoted only from [this](https://simpleicons.org/) and [this](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md) website
 
 - [X] (Add a redirect link
-- [ ] (Change the color of the label)
-- [ ] (Download the badge)
+- [X] (Change the color of the label)
+- [X] (Download the badge)
 
 
 ## Thanks to
