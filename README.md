@@ -29,10 +29,18 @@ https://user-images.githubusercontent.com/97180951/156024192-b4e1bdb5-2241-4908-
 [This is the youtube tutorial](https://youtu.be/AdBj-rSsBog)
 
 
-## Recently added features
+## Recent updates
 
 <img width="237" alt="image" src="https://user-images.githubusercontent.com/97180951/156022374-ae4c3834-c750-4930-aa14-2ed24aab1131.png">
-Now you can make the following type of badges with this library.
+* Now you can make the following type of badges with this library.
+
+* Download the badge as PNG as SVG.
+* Add a logo to your badge
+![image](https://user-images.githubusercontent.com/97180951/156128379-bf486305-afb1-4bd1-9e30-13ccc427ce02.png)
+
+All the logos will be suppoted only from [this](https://simpleicons.org/) and [this](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md) website
+* Add a redirect link on the click
+* Change the color of the label of the background of the left part.
   
 ## Implementation
 
@@ -71,15 +79,26 @@ binding.badge.setLabel(binding.labelED.getText().toString());
 binding.badge.setType(BadgeType.social);
 ```
 
-If you want to get the input from edittext or something for the type, you can do like this
+If you want to get the input of `BadgeType` from edittext or something for the type, you can do like this
 ```
 binding.badge.setType(BadgeType.startText + ed.getText().toString());
 ```
+---
 
 You can now also add redirect links. In this, you provide the link, and then it will open the browser and you can view the webpage. You can provide a url like this.
 ```
 binding.badge.setLink("https://stackoverflow.com");
 ```
+**Note:** Do not add OnClickListener when you are adding a redirect link. This will override the redirect task.
+
+---
+
+You can now change the color of the of the right side part of the message part like this
+```
+binding.badge.setLabelColor("#abcdef");
+// You can also use the predefined ones like this
+binding.badge.setLabelColor(BadgeColor.blue);
+---
 
 You can also add a logo now(Added on 2 March 2022)
 ```
@@ -87,7 +106,7 @@ binding.badge.setLogo("anta");
 ```
 All the logos will be suppoted only from [this](https://simpleicons.org/) and [this](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md) website
 
-This is ideal for when you are getting the text from editext or so. But you are making it in the java without modification, you are prefered to use the `BadgeColor` class for the colors.
+---
 
 Also you can modify the tint of the logo like this
 ```
@@ -95,16 +114,19 @@ binding.badge.setLogoColor("aaa");
 // You can also use the predefined ones like this
 binding.badge.setLogoColor(BadgeColor.yellow);
 ```
+---
 
 Also you can change the width of the logo like this
 ```
 binding.badge.setLogoWidth("40");
 ```
+---
 
 You can change the background color of the right side part or the message part Something like this
 ```
 binding.badge.setColor(BadgeColor.blue);
 ```
+---
 
 You can also use custom colors for the badge like this
 ```
@@ -120,6 +142,7 @@ The default colors present in the `BadgeColor` class are:-
 6. red
 7. lightGrey
 8. blue
+9. And a lot more. Refer to the [BadgeColor](https://github.com/sambhav2358/BadgeGenerator/blob/main/BadgeGeneratorLibrary/src/main/java/com/sambhav2358/badgegeneratorlibrary/BadgeColor.java) to see all the available colors.
 
 ## Downloading the badge
 
@@ -137,19 +160,14 @@ Also sometimes you might want to save the badge. You can save it the following t
  ```
 
 ## Coming in the future
-- [X] (Add a logo )
-![image](https://user-images.githubusercontent.com/97180951/156128379-bf486305-afb1-4bd1-9e30-13ccc427ce02.png)
-
-All the logos will be suppoted only from [this](https://simpleicons.org/) and [this](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md) website
-
-- [X] (Add a redirect link
-- [X] (Change the color of the label)
-- [X] (Download the badge)
+I have no ideas of what to add next. Please suggest me by adding an issue.
 
 
 ## Thanks to
 [Shields.io](https://shields.io)
 
+
+[Picasso](https://github.com/square/picasso)
 
 
 [GlideToVectorYou](https://github.com/corouteam/GlideToVectorYou)
