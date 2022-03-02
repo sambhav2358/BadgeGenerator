@@ -98,6 +98,7 @@ You can now change the color of the of the right side part of the message part l
 binding.badge.setLabelColor("#abcdef");
 // You can also use the predefined ones like this
 binding.badge.setLabelColor(BadgeColor.blue);
+```
 ---
 
 You can also add a logo now(Added on 2 March 2022)
