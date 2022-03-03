@@ -30,11 +30,11 @@ https://user-images.githubusercontent.com/97180951/156024192-b4e1bdb5-2241-4908-
 
 
 ## Recent updates
+Now you can make the following type of badges with this library.
 
 <img width="237" alt="image" src="https://user-images.githubusercontent.com/97180951/156022374-ae4c3834-c750-4930-aa14-2ed24aab1131.png">
-* Now you can make the following type of badges with this library.
-
-* Download the badge as PNG as SVG.
+ 
+* Download the badge as PNG or SVG.
 * Add a logo to your badge
 ![image](https://user-images.githubusercontent.com/97180951/156128379-bf486305-afb1-4bd1-9e30-13ccc427ce02.png)
 
