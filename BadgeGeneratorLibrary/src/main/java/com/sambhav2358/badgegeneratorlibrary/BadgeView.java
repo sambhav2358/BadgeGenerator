@@ -1,5 +1,6 @@
 package com.sambhav2358.badgegeneratorlibrary;
 
+import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -43,8 +44,10 @@ public class BadgeView extends AppCompatImageView {
     private boolean isLogoSize = false;
     private boolean isLogoColor = false;
     private String currentUrl = "";
+    public static Context context;
 
     private void init(Context c){
+        context = c;
         TypedArray values = c.getTheme().obtainStyledAttributes(
                 null,
                 R.styleable.Badge,
@@ -284,5 +287,10 @@ public class BadgeView extends AppCompatImageView {
         if (!isPNG) return;
         Log.d("logoColor",isLogoColor + "");
         Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
+    }
+
+    public void makeBadgeFromUrl(String url, boolean hasIcon){
+        if (hasIcon) Picasso.get().load(url).into(this);
+        else GlideToVectorYou.justLoadImage((Activity) getContext(),Uri.parse(url),this);
     }
 }
