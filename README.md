@@ -1,15 +1,15 @@
 # BadgeGenerator
-Have you ever seen a badge like this while using other library -> <img src="https://img.shields.io/badge/Latest%20Version-1.7-blue"/>
+Have you ever seen a badge like this while using other library -> <img src="https://img.shields.io/badge/Latest%20Version-1.8-blue"/>
 
 **Do you want to add that to your own app?**
 
 Well, to do this, just use this library.
 
 [![API](https://img.shields.io/badge/API-20%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=20)
-  <img src="https://img.shields.io/badge/Latest%20Version-1.7-blue"/>
+  <img src="https://img.shields.io/badge/Latest%20Version-1.8-blue"/>
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sambhav2358/BadgeGenerator">
   <a href="https://jitpack.io/#sambhav2358/BadgeGenerator"><img src="https://jitpack.io/v/sambhav2358/BadgeGenerator/month.svg"/></a>
-  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.7"/>
+  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.8"/>
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/sambhav2358/BadgeGenerator?color=blue">
   <a href="https://github.com/sambhav2358/BadgeGenerator/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/sambhav2358/BadgeGenerator?label=Forks"></a>
   <a href="https://github.com/sambhav2358/BadgeGenerator/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/sambhav2358/BadgeGenerator?label=Stars"></a>
