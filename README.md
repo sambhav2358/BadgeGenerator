@@ -21,13 +21,17 @@ Well, to do this, just use this library.
   
 ## Sample
 
-
-
 https://user-images.githubusercontent.com/97180951/156024192-b4e1bdb5-2241-4908-9940-9352781db01d.mp4
 
+**Note:** This is not updated to the features supported in the latest version.
+
 ## Tutorial
+
+
 [This is the youtube tutorial](https://youtu.be/AdBj-rSsBog)
 
+
+**Note:** This is not updated to the features supported in the latest version.
 
 ## Recent updates
 Now you can make the following type of badges with this library.
