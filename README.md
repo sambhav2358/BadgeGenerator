@@ -189,7 +189,7 @@ Also sometimes you might want to save the badge. You can save it the following t
  binding.badge.downloadBadgePNG(Environment.DIRECTORY_PICTURES);
  ```
  ## Drawbacks
- ### When using an image, the badge quality decreases by too much.
+ #### When using an image, the badge quality decreases by too much.
  When we use a picture, it cannot be converted to svg. So, the the badge is made in png form. This decreases the image quality
 
 ## Coming in the future
