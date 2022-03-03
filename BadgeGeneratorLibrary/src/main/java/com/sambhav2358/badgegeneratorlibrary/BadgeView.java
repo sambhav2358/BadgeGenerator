@@ -58,13 +58,13 @@ public class BadgeView extends AppCompatImageView {
         } finally {
             values.recycle();
         }
-        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + badgeLabel.replaceAll(" ", spaceReplaceText) + "-" + badgeMessage.replaceAll(" ", spaceReplaceText) + "-" + badgeColor.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "");
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + badgeLabel.replaceAll(" ", spaceReplaceText) + "-" + badgeMessage.replaceAll(" ", spaceReplaceText) + "-" + badgeColor.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "");
         GlideToVectorYou
                 .init()
                 .with(getContext())
-                .load(Uri.parse(startUrlNormal + badgeLabel.replaceAll(" ", spaceReplaceText) + "-" + badgeMessage.replaceAll(" ", spaceReplaceText) + "-" + badgeColor.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")), this);
+                .load(Uri.parse(startUrlNormal + badgeLabel.replaceAll(" ", spaceReplaceText) + "-" + badgeMessage.replaceAll(" ", spaceReplaceText) + "-" + badgeColor.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "")), this);
         if (!isPNG) return;
-        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
     }
 
     public BadgeView(Context c){
@@ -85,38 +85,38 @@ public class BadgeView extends AppCompatImageView {
 
     public void setLabel(String label){
         this.label = label;
-        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "");
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "");
         showCurrentUrlLog();
         GlideToVectorYou
                 .init()
                 .with(getContext())
-                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")), this);
+                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "")), this);
         if (!isPNG) return;
-        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
     }
 
     public void setMessage(String message) {
         this.message = message;
-        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "");
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "");
         showCurrentUrlLog();
         GlideToVectorYou
                 .init()
                 .with(getContext())
-                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")), this);
+                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "")), this);
         if (!isPNG) return;
-        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
     }
 
     public void setColor(String color) {
         this.color = color;
-        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "");
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "");
         showCurrentUrlLog();
         GlideToVectorYou
                 .init()
                 .with(getContext())
-                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")), this);
+                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "")), this);
         if (!isPNG) return;
-        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
     }
 
     public String getLabel() {
@@ -142,14 +142,14 @@ public class BadgeView extends AppCompatImageView {
             isStyle = false;
             return;
         }
-        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "");
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "");
         showCurrentUrlLog();
         GlideToVectorYou
                 .init()
                 .with(getContext())
-                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")), this);
+                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "")), this);
         if (!isPNG) return;
-        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
     }
 
     public String getLogo() {
@@ -165,14 +165,14 @@ public class BadgeView extends AppCompatImageView {
             isPNG = false;
             return;
         }
-        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "");
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "");
         showCurrentUrlLog();
         GlideToVectorYou
                 .init()
                 .with(getContext())
-                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")), this);
+                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "")), this);
         if (!isPNG) return;
-        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
     }
 
     public void setCustomLogo(String customLogoBase64) {
@@ -183,9 +183,9 @@ public class BadgeView extends AppCompatImageView {
             isLogo = false;
             return;
         }
-        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=data:image/png;base64," + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "");
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=data:image/png;base64," + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "");
         showCurrentUrlLog();
-        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=data:image/png;base64," + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=data:image/png;base64," + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
         Log.d("thisTheLink:" , currentUrl);
     }
 
@@ -238,14 +238,14 @@ public class BadgeView extends AppCompatImageView {
             isLogoSize = false;
             return;
         }
-        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "");
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "");
         showCurrentUrlLog();
         GlideToVectorYou
                 .init()
                 .with(getContext())
-                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")), this);
+                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor=" + logoColor : "")), this);
         if (!isPNG) return;
-        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
     }
 
     public String getLabelColor() {
@@ -254,14 +254,14 @@ public class BadgeView extends AppCompatImageView {
 
     public void setLabelColor(String labelColor) {
         this.labelColor = (labelColor != null && !labelColor.trim().isEmpty() ? labelColor : "555");
-        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + this.labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "");
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + this.labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "");
         showCurrentUrlLog();
         GlideToVectorYou
                 .init()
                 .with(getContext())
-                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor=" + this.labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "")), this);
+                .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor=" + this.labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "")), this);
         if (!isPNG) return;
-        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + this.labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + this.labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
     }
 
     public String getBadgeColor() {
@@ -275,7 +275,7 @@ public class BadgeView extends AppCompatImageView {
             isLogoColor = false;
             return;
         }
-        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "");
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "");
         showCurrentUrlLog();
         GlideToVectorYou
                 .init()
