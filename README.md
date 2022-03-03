@@ -58,7 +58,7 @@ implementation 'com.github.sambhav2358:BadgeGenerator:Latest-Version'
 
 1. XML
 ```
-<com.sambhav2358.badgegeneratorlibrary.Badge
+<com.sambhav2358.badgegeneratorlibrary.BadgeView
         android:id="@+id/badge"
         android:layout_width="match_parent"
         android:layout_height="0dp"

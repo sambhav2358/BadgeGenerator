@@ -3,8 +3,13 @@ package com.sambhav2358.badgegeneratorlibrary;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.util.AttributeSet;
+import android.util.Base64;
+import android.util.Log;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.browser.customtabs.CustomTabsIntent;
@@ -12,8 +17,12 @@ import androidx.browser.customtabs.CustomTabsIntent;
 import com.github.twocoffeesoneteam.glidetovectoryou.GlideToVectorYou;
 import com.squareup.picasso.Picasso;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 
-public class Badge extends AppCompatImageView {
+
+public class BadgeView extends AppCompatImageView {
     private String label = "Label";
     private String message = "Message";
     private String color = "blue";
@@ -32,7 +41,7 @@ public class Badge extends AppCompatImageView {
     private boolean isPNG = false;
     private boolean isLogoSize = false;
     private boolean isLogoColor = false;
-    private String currentUrl;
+    private String currentUrl = "";
 
     private void init(Context c){
         TypedArray values = c.getTheme().obtainStyledAttributes(
@@ -57,12 +66,12 @@ public class Badge extends AppCompatImageView {
         Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
     }
 
-    public Badge(Context c){
+    public BadgeView(Context c){
         super(c);
         init(c);
     }
 
-    public Badge(Context c, AttributeSet attrs) {
+    public BadgeView(Context c, AttributeSet attrs) {
         super(c,attrs);
         init(c);
     }
@@ -152,6 +161,19 @@ public class Badge extends AppCompatImageView {
                 .load(Uri.parse(startUrlNormal + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")), this);
         if (!isPNG) return;
         Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+    }
+
+    public void setCustomLogo(String customLogoBase64) {
+        this.logo = customLogoBase64;
+        isLogo = true;
+        isPNG = false;
+        if (customLogoBase64 == null || customLogoBase64.trim().equals( "" )) {
+            isLogo = false;
+            return;
+        }
+        currentUrl = (!isPNG ? startUrlNormal : startUrlRaster) + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=data:image/png;base64," + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor" + logoColor : "");
+        Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=data:image/png;base64," + logo : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoSize ? "&logoWidth=" + logoWidth : "") + (isLogoColor ? "&logoColor" + logoColor : "")).into(this);
+        Log.d("thisTheLink:" , currentUrl);
     }
 
     public String getLink() {

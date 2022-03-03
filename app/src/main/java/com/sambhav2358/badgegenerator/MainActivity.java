@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.view.View;
 
 import com.sambhav2358.badgegenerator.databinding.ActivityMainBinding;
 import com.sambhav2358.badgegeneratorlibrary.BadgeColor;
 import com.sambhav2358.badgegeneratorlibrary.BadgeType;
 
 public class MainActivity extends AppCompatActivity {
+
     ActivityMainBinding binding;
 
     @Override
@@ -22,18 +24,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init(){
-        binding.badge.setLink("slither.io");
         binding.done.setOnClickListener(v -> {
             binding.badge.setColor(binding.colorED.getText().toString());
             binding.badge.setMessage(binding.messageED.getText().toString());
             binding.badge.setLabel(binding.labelED.getText().toString());
             binding.badge.setType(BadgeType.startText + binding.styleED.getText().toString());
-            binding.badge.setLogo("anta");
-            binding.badge.setLogoWidth("10");
-            binding.badge.setLabelColor("aaa");
+            if (binding.customImage.isChecked()){
+                binding.badge.setCustomLogo(binding.customLogoED.getText().toString());
+            }else {
+                binding.badge.setLogo(binding.logoED.getText().toString());
+            }
+            binding.badge.setLink(binding.customRedirectED.getText().toString());
+            binding.badge.setLabelColor(binding.customLabelED.getText().toString());
+            binding.badge.setLogoColor(binding.customLogoColorED.getText().toString());
         });
-        binding.badge.setLogo("telegram");
-        binding.badge.setLogoWidth("25");
-        binding.badge.setLabelColor("abcdef");
+
+        binding.customImage.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                binding.customLogoED.setVisibility(View.VISIBLE);
+                binding.logoED.setVisibility(View.GONE);
+            }else {
+                binding.customLogoED.setVisibility(View.GONE);
+                binding.logoED.setVisibility(View.VISIBLE);
+            }
+        });
     }
 }

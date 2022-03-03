@@ -7,38 +7,82 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <com.sambhav2358.badgegeneratorlibrary.Badge
+    <com.sambhav2358.badgegeneratorlibrary.BadgeView
         android:id="@+id/badge"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:badgeMessage="This is a sample message"
-        app:badgeLabel="This is a sample label"
+        android:layout_margin="15dp"
         android:layout_weight="1"
-        android:layout_margin="20dp"/>
+        app:badgeLabel="This is a sample label"
+        app:badgeMessage="This is a sample message" />
 
     <EditText
         android:id="@+id/labelED"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter the label here."/>
+        android:hint="Enter the label here."
+        android:text="Label"/>
 
     <EditText
         android:id="@+id/messageED"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter the message here."/>
+        android:hint="Enter the message here."
+        android:text="Message"/>
 
     <EditText
         android:id="@+id/colorED"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter the color here."/>
+        android:hint="Enter the color here."
+        android:text="blue"/>
 
     <EditText
         android:id="@+id/styleED"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter the style here."/>
+        android:hint="Enter the style here."
+        android:text="flat"/>
+
+    <CheckBox
+        android:id="@+id/customImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom logo base64."/>
+
+    <EditText
+        android:id="@+id/logoED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the logo here."/>
+
+    <EditText
+        android:id="@+id/customLogoED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the custom logo base64 here."
+        android:maxHeight="100dp"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/customRedirectED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the custom redirect link here."
+        android:text="links.net"/>
+
+    <EditText
+        android:id="@+id/customLabelED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the custom label color here."
+        android:text="#555"/>
+
+    <EditText
+        android:id="@+id/customLogoColorED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the custom logo color here."/>
 
     <Button
         android:id="@+id/done"
