@@ -1,15 +1,15 @@
 # BadgeGenerator
-Have you ever seen a badge like this while using other library -> <img src="https://img.shields.io/badge/Latest%20Version-1.6-blue"/>
+Have you ever seen a badge like this while using other library -> <img src="https://img.shields.io/badge/Latest%20Version-1.7-blue"/>
 
 **Do you want to add that to your own app?**
 
 Well, to do this, just use this library.
 
 [![API](https://img.shields.io/badge/API-20%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=20)
-  <img src="https://img.shields.io/badge/Latest%20Version-1.6-blue"/>
+  <img src="https://img.shields.io/badge/Latest%20Version-1.7-blue"/>
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sambhav2358/BadgeGenerator">
   <a href="https://jitpack.io/#sambhav2358/BadgeGenerator"><img src="https://jitpack.io/v/sambhav2358/BadgeGenerator/month.svg"/></a>
-  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.6"/>
+  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.7"/>
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/sambhav2358/BadgeGenerator?color=blue">
   <a href="https://github.com/sambhav2358/BadgeGenerator/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/sambhav2358/BadgeGenerator?label=Forks"></a>
   <a href="https://github.com/sambhav2358/BadgeGenerator/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/sambhav2358/BadgeGenerator?label=Stars"></a>
@@ -41,6 +41,7 @@ Now you can make the following type of badges with this library.
 All the logos will be suppoted only from [this](https://simpleicons.org/) and [this](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md) website
 * Add a redirect link on the click
 * Change the color of the label of the background of the left part.
+* Add a custom logo from Base64.
   
 ## Implementation
 
@@ -108,6 +109,27 @@ You can also add a logo now(Added on 2 March 2022)
 binding.badge.setLogo("anta");
 ```
 All the logos will be suppoted only from [this](https://simpleicons.org/) and [this](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md) website
+
+---
+
+The logos provided in those links might not help you. So, you can also use a custom logo which is encoded as a `Base64` string.
+
+It works something like this
+```
+binding.badge.setCustomLogo("your base64 string.");
+```
+
+Sometimes you might not have a image in `Base64`. This library does it for you. Just use the `Base64Converter` class. Something like this.
+```
+binding.badge.setCustomLogo(Base64Converter.getBase64FromBitmap(myBitmap));
+```
+
+You can convert the following types of files to base 64. More coming in the future.
+* Uri
+* Bitmap
+* File
+* FilePath
+
 
 ---
 
