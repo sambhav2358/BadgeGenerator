@@ -188,6 +188,37 @@ Also sometimes you might want to save the badge. You can save it the following t
  ```
  binding.badge.downloadBadgePNG(Environment.DIRECTORY_PICTURES);
  ```
+ 
+ ## Badge from url.
+ Now you dont want to add all these properties and use it, just provide the url and the library does the rest for you.
+ 
+ **Note:** You should only provide a valid url. You can refer to [this](shields.io) website and try all the possible combination. Providing a wrong url will not load thw badge.
+ 
+Eg:
+```
+binding.badge.makeBadgeFromUrl("https://img.shields.io/github/downloads/sambhav2358/BadgeGenerator/total");
+```
+
+To get the url, you need to follow these steps.
+1. Open the shiels.io website.
+2. Pick any of the category
+
+<img width="269" alt="image" src="https://user-images.githubusercontent.com/97180951/156612502-ead3b2cf-11ff-4416-a61e-bd04d4fb7166.png">
+3. Here i am taking Downlaod category.
+
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/97180951/156612678-a7879158-7edb-4ea0-b94c-bbab1f48bb57.png">
+
+4. Then i will pick any type. Here i choose `GitHub release (latest by date)` And provide the details.
+ <img width="1262" alt="image" src="https://user-images.githubusercontent.com/97180951/156612886-48e3697c-f952-4ae8-9e90-5ff0157008e1.png">
+5. Click on copy badge url.
+
+<img width="170" alt="image" src="https://user-images.githubusercontent.com/97180951/156612992-bf5a2926-2dcf-4d28-b7f5-e2c12ca9b296.png">
+6. Paste the url in the method.
+<br/>
+7. Done. Now the badge will be loaded
+
+ 
+ 
  ## Drawbacks
  #### When using an image, the badge quality decreases by too much.
  When we use a picture, it cannot be converted to svg. So, the the badge is made in png form. This decreases the image quality
