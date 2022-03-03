@@ -1,15 +1,15 @@
 # BadgeGenerator
-Have you ever seen a badge like this while using other library -> <img src="https://img.shields.io/badge/Latest%20Version-1.6-blue"/>
+Have you ever seen a badge like this while using other library -> <img src="https://img.shields.io/badge/Latest%20Version-1.8-blue"/>
 
 **Do you want to add that to your own app?**
 
 Well, to do this, just use this library.
 
 [![API](https://img.shields.io/badge/API-20%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=20)
-  <img src="https://img.shields.io/badge/Latest%20Version-1.6-blue"/>
+  <img src="https://img.shields.io/badge/Latest%20Version-1.8-blue"/>
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sambhav2358/BadgeGenerator">
   <a href="https://jitpack.io/#sambhav2358/BadgeGenerator"><img src="https://jitpack.io/v/sambhav2358/BadgeGenerator/month.svg"/></a>
-  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.6"/>
+  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.8"/>
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/sambhav2358/BadgeGenerator?color=blue">
   <a href="https://github.com/sambhav2358/BadgeGenerator/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/sambhav2358/BadgeGenerator?label=Forks"></a>
   <a href="https://github.com/sambhav2358/BadgeGenerator/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/sambhav2358/BadgeGenerator?label=Stars"></a>
@@ -21,13 +21,17 @@ Well, to do this, just use this library.
   
 ## Sample
 
-
-
 https://user-images.githubusercontent.com/97180951/156024192-b4e1bdb5-2241-4908-9940-9352781db01d.mp4
 
+**Note:** This is not updated to the features supported in the latest version.
+
 ## Tutorial
+
+
 [This is the youtube tutorial](https://youtu.be/AdBj-rSsBog)
 
+
+**Note:** This is not updated to the features supported in the latest version.
 
 ## Recent updates
 Now you can make the following type of badges with this library.
@@ -41,6 +45,7 @@ Now you can make the following type of badges with this library.
 All the logos will be suppoted only from [this](https://simpleicons.org/) and [this](https://github.com/simple-icons/simple-icons/blob/develop/slugs.md) website
 * Add a redirect link on the click
 * Change the color of the label of the background of the left part.
+* Add a custom logo from Base64.
   
 ## Implementation
 
@@ -54,7 +59,7 @@ Then add it to your root level `build.gradle` file:
 implementation 'com.github.sambhav2358:BadgeGenerator:Latest-Version'
 ```
 
-And if you dont feel this convenient, you can download the `.aar` file from [here](https://jitpack.io/com/github/sambhav2358/BadgeGenerator/1.6/BadgeGenerator-1.6.aar) and then add it to your app.
+And if you dont feel this convenient, you can download the `.aar` file from [here](https://jitpack.io/com/github/sambhav2358/BadgeGenerator/1.8/BadgeGenerator-1.8.aar) and then add it to your app.
 
 ## How to use?
 
@@ -111,6 +116,27 @@ All the logos will be suppoted only from [this](https://simpleicons.org/) and [t
 
 ---
 
+The logos provided in those links might not help you. So, you can also use a custom logo which is encoded as a `Base64` string.
+
+It works something like this
+```
+binding.badge.setCustomLogo("your base64 string.");
+```
+
+Sometimes you might not have a image in `Base64`. This library does it for you. Just use the `Base64Converter` class. Something like this.
+```
+binding.badge.setCustomLogo(Base64Converter.getBase64FromBitmap(myBitmap));
+```
+
+You can convert the following types of files to base 64. More coming in the future.
+* Uri
+* Bitmap
+* File
+* FilePath
+
+
+---
+
 Also you can modify the tint of the logo like this
 ```
 binding.badge.setLogoColor("aaa");
@@ -152,6 +178,7 @@ The default colors present in the `BadgeColor` class are:-
 Also sometimes you might want to save the badge. You can save it the following types
 * Png
 * SVG
+ 
  Downloading SVG
  ```
  binding.badge.downloadBadgeSVG(Environment.DIRECTORY_PICTURES);
@@ -161,6 +188,9 @@ Also sometimes you might want to save the badge. You can save it the following t
  ```
  binding.badge.downloadBadgePNG(Environment.DIRECTORY_PICTURES);
  ```
+ ## Drawbacks
+ #### When using an image, the badge quality decreases by too much.
+ When we use a picture, it cannot be converted to svg. So, the the badge is made in png form. This decreases the image quality
 
 ## Coming in the future
 I have no ideas of what to add next. Please suggest me by adding an issue.
