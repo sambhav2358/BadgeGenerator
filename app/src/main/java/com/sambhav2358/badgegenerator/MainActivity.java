@@ -41,9 +41,11 @@ public class MainActivity extends AppCompatActivity {
 
         binding.customImage.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
+                //a default logo
                 binding.customLogoED.setVisibility(View.VISIBLE);
                 binding.logoED.setVisibility(View.GONE);
             }else {
+                // a custom logo from Base64
                 binding.customLogoED.setVisibility(View.GONE);
                 binding.logoED.setVisibility(View.VISIBLE);
             }
