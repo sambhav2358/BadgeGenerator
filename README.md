@@ -1,15 +1,15 @@
 # BadgeGenerator
-Have you ever seen a badge like this while using other library -> <img src="https://img.shields.io/badge/Latest%20Version-1.1-blue"/>
+Have you ever seen a badge like this while using other library -> <img src="https://img.shields.io/badge/Latest%20Version-1.6-blue"/>
 
 **Do you want to add that to your own app?**
 
 Well, to do this, just use this library.
 
 [![API](https://img.shields.io/badge/API-20%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=20)
-  [![API](https://img.shields.io/github/v/release/sambhav2358/BadgeGenerator.svg)](https://img.shields.io/github/v/release/sambhav2358/BadgeGenerator.svg)
+  <img src="https://img.shields.io/badge/Latest%20Version-1.6-blue"/>
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sambhav2358/BadgeGenerator">
   <a href="https://jitpack.io/#sambhav2358/BadgeGenerator"><img src="https://jitpack.io/v/sambhav2358/BadgeGenerator/month.svg"/></a>
-  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.3"/>
+  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/1.6"/>
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/sambhav2358/BadgeGenerator?color=blue">
   <a href="https://github.com/sambhav2358/BadgeGenerator/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/sambhav2358/BadgeGenerator?label=Forks"></a>
   <a href="https://github.com/sambhav2358/BadgeGenerator/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/sambhav2358/BadgeGenerator?label=Stars"></a>
@@ -30,11 +30,11 @@ https://user-images.githubusercontent.com/97180951/156024192-b4e1bdb5-2241-4908-
 
 
 ## Recent updates
+Now you can make the following type of badges with this library.
 
 <img width="237" alt="image" src="https://user-images.githubusercontent.com/97180951/156022374-ae4c3834-c750-4930-aa14-2ed24aab1131.png">
-* Now you can make the following type of badges with this library.
-
-* Download the badge as PNG as SVG.
+ 
+* Download the badge as PNG or SVG.
 * Add a logo to your badge
 ![image](https://user-images.githubusercontent.com/97180951/156128379-bf486305-afb1-4bd1-9e30-13ccc427ce02.png)
 
@@ -53,6 +53,8 @@ Then add it to your root level `build.gradle` file:
 ```
 implementation 'com.github.sambhav2358:BadgeGenerator:Latest-Version'
 ```
+
+And if you dont feel this convenient, you can download the `.aar` file from [here](https://jitpack.io/com/github/sambhav2358/BadgeGenerator/1.6/BadgeGenerator-1.6.aar) and then add it to your app.
 
 ## How to use?
 
@@ -98,6 +100,7 @@ You can now change the color of the of the right side part of the message part l
 binding.badge.setLabelColor("#abcdef");
 // You can also use the predefined ones like this
 binding.badge.setLabelColor(BadgeColor.blue);
+```
 ---
 
 You can also add a logo now(Added on 2 March 2022)
