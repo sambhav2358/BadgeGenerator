@@ -289,8 +289,7 @@ public class BadgeView extends AppCompatImageView {
         Picasso.get().load(startUrlRaster + label.replaceAll(" ", spaceReplaceText) + "-" + message.replaceAll(" ", spaceReplaceText) + "-" + color.replaceAll("#",colorReplaceText) + "?" + (isStyle ? type : BadgeType.plastic) + (isLogo ? "&logo=" + logo : "") + (isLogoSize ? "&logoWidth=" + logoWidth : "") + "&labelColor="  + labelColor.replaceAll("#",colorReplaceText) + (isLogoColor ? "&logoColor=" + logoColor : "")).into(this);
     }
 
-    public void makeBadgeFromUrl(String url, boolean hasIcon){
-        if (hasIcon) Picasso.get().load(url).into(this);
-        else GlideToVectorYou.justLoadImage((Activity) getContext(),Uri.parse(url),this);
+    public void makeBadgeFromUrl(String url){
+        GlideToVectorYou.justLoadImage((Activity) getContext(),Uri.parse(url),this);
     }
 }
