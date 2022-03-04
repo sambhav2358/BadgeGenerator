@@ -1,5 +1,6 @@
 package com.sambhav2358.badgegeneratorlibrary;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Context;
@@ -44,12 +45,10 @@ public class BadgeView extends AppCompatImageView {
     private boolean isLogoSize = false;
     private boolean isLogoColor = false;
     private String currentUrl = "";
-    public static Context context;
 
-    private void init(Context c){
-        context = c;
+    private void init(Context c, AttributeSet attributeSet){
         TypedArray values = c.getTheme().obtainStyledAttributes(
-                null,
+                attributeSet,
                 R.styleable.Badge,
                 0, 0 );
         String badgeLabel;
@@ -58,6 +57,14 @@ public class BadgeView extends AppCompatImageView {
         try {
             badgeLabel = values.getString(R.styleable.Badge_badgeLabel) != null ? values.getString(R.styleable.Badge_badgeLabel).replaceAll(" ",spaceReplaceText) : "Label";
             badgeMessage = values.getString(R.styleable.Badge_badgeMessage) != null ? values.getString(R.styleable.Badge_badgeMessage).replaceAll(" ",spaceReplaceText) : "Message";
+            String redirectUrl = values.getString(R.styleable.Badge_redirectUrl) != null ? values.getString(R.styleable.Badge_redirectUrl) : null;
+            String logo = values.getString(R.styleable.Badge_logoImage) != null ? values.getString(R.styleable.Badge_logoImage) : null;
+            String customLogo = values.getString(R.styleable.Badge_logoBase64) != null ? values.getString(R.styleable.Badge_logoBase64) : null;
+            String logoWidth = values.getString(R.styleable.Badge_logoWidth) != null ? values.getString(R.styleable.Badge_logoWidth) : null;
+            setLink(redirectUrl);
+            setLogo(logo);
+            setCustomLogo(customLogo);
+            setLogoWidth(logoWidth);
         } finally {
             values.recycle();
         }
@@ -72,12 +79,12 @@ public class BadgeView extends AppCompatImageView {
 
     public BadgeView(Context c){
         super(c);
-        init(c);
+        init(c,null);
     }
 
     public BadgeView(Context c, AttributeSet attrs) {
         super(c,attrs);
-        init(c);
+        init(c,attrs);
     }
 
     private void showCurrentUrlLog(){

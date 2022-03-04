@@ -14,7 +14,9 @@
         android:layout_margin="15dp"
         android:layout_weight="1"
         app:badgeLabel="This is a sample label"
-        app:badgeMessage="This is a sample message" />
+        app:badgeMessage="This is a sample message"
+        app:redirectUrl="links.net"
+        app:logoImage="whatsapp"/>
 
     <EditText
         android:id="@+id/labelED"

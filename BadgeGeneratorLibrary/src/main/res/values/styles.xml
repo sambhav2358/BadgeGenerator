@@ -5,7 +5,9 @@
 
         <attr name="badgeLabel" format="string"/>
         <attr name="badgeMessage" format="string"/>
-
+        <attr name="redirectUrl" format="string"/>
+        <attr name="logoImage" format="string"/>
+        <attr name="logoBase64" format="string"/>
+        <attr name="logoWidth" format="string"/>
     </declare-styleable>
-    
 </resources>
