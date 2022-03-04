@@ -1,15 +1,15 @@
 # BadgeGenerator
-Have you ever seen a badge like this while using other library -> <img src="https://img.shields.io/badge/Latest%20Version-2.1-blue"/>
+Have you ever seen a badge like this while using other library -> <img src="https://img.shields.io/badge/Latest%20Version-2.2-blue"/>
 
 **Do you want to add that to your own app?**
 
 Well, to do this, just use this library.
 
 [![API](https://img.shields.io/badge/API-20%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=20)
-  <img src="https://img.shields.io/badge/Latest%20Version-2.1-blue"/>
+  <img src="https://img.shields.io/badge/Latest%20Version-2.2-blue"/>
   <img src="https://img.shields.io/badge/Library%20Size-9KB-blue">
   <a href="https://jitpack.io/#sambhav2358/BadgeGenerator"><img src="https://jitpack.io/v/sambhav2358/BadgeGenerator/month.svg"/></a>
-  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/2.1"/>
+  <img src="https://img.shields.io/github/commits-since/sambhav2358/BadgeGenerator/2.2"/>
   <img alt="GitHub issues" src="https://img.shields.io/github/issues/sambhav2358/BadgeGenerator?color=blue">
   <a href="https://github.com/sambhav2358/BadgeGenerator/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/sambhav2358/BadgeGenerator?label=Forks"></a>
   <a href="https://github.com/sambhav2358/BadgeGenerator/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/sambhav2358/BadgeGenerator?label=Stars"></a>
@@ -57,7 +57,7 @@ Then add it to your root level `build.gradle` file:
 implementation 'com.github.sambhav2358:BadgeGenerator:Latest-Version'
 ```
 
-And if you dont feel this convenient, you can download the `.aar` file from [here](https://jitpack.io/com/github/sambhav2358/BadgeGenerator/2.1/BadgeGenerator-2.1.aar) and then add it to your app.
+And if you dont feel this convenient, you can download the `.aar` file from [here](https://jitpack.io/com/github/sambhav2358/BadgeGenerator/2.2/BadgeGenerator-2.2.aar) and then add it to your app.
 
 ## How to use?
 
