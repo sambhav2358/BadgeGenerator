@@ -64,12 +64,17 @@ And if you dont feel this convenient, you can download the `.aar` file from [her
 1. XML
 ```
 <com.sambhav2358.badgegeneratorlibrary.BadgeView
-        android:id="@+id/badge"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:badgeMessage="This is a sample message"
-        app:badgeLabel="This is a sample label"
-        android:layout_weight="1"/>
+    android:id="@+id/badge"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_margin="15dp"
+    android:layout_weight="1"
+    app:badgeLabel="This is a sample label"
+    app:badgeMessage="This is a sample message"
+    app:redirectUrl="links.net"
+    app:logoImage="whatsapp"
+    app:logoBase64="myBase64Image"
+    app:logoWidth="25"/>
 ```
 
 NOTE: This libraray does not support to change the badge color from xml.
