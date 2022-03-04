@@ -59,7 +59,7 @@ Then add it to your root level `build.gradle` file:
 implementation 'com.github.sambhav2358:BadgeGenerator:Latest-Version'
 ```
 
-And if you dont feel this convenient, you can download the `.aar` file from [here](https://jitpack.io/com/github/sambhav2358/BadgeGenerator/1.9/BadgeGenerator-1.9.aar) and then add it to your app.
+And if you dont feel this convenient, you can download the `.aar` file from [here](https://jitpack.io/com/github/sambhav2358/BadgeGenerator/2.1/BadgeGenerator-2.1.aar) and then add it to your app.
 
 ## How to use?
 
