@@ -21,9 +21,7 @@ Well, to do this, just use this library.
   
 ## Sample
 
-https://user-images.githubusercontent.com/97180951/156024192-b4e1bdb5-2241-4908-9940-9352781db01d.mp4
-
-**Note:** This is not updated to the features supported in the latest version.
+https://user-images.githubusercontent.com/97180951/156737133-298fd35c-9092-417c-9917-9e9a3f563ecf.mp4
 
 ## Tutorial
 
@@ -90,6 +88,15 @@ If you want to get the input of `BadgeType` from edittext or something for the t
 ```
 binding.badge.setType(BadgeType.startText + ed.getText().toString());
 ```
+
+The default supported badge types are
+* for-the-badge -> <img margin="20%" width="213" alt="image" src="https://user-images.githubusercontent.com/97180951/156737547-d25af095-f0ae-4985-b1f7-4a49f954f05e.png">
+* plastic -> <img width="101" alt="image" src="https://user-images.githubusercontent.com/97180951/156737806-4b74b7f5-0b6b-4072-a46f-98dfece78bff.png">
+* flat -> <img width="83" alt="image" src="https://user-images.githubusercontent.com/97180951/156737865-865fcfa4-e906-451b-8f1d-6ea306be62ad.png">
+* flat-square -> <img width="125" alt="image" src="https://user-images.githubusercontent.com/97180951/156738007-474d8622-b752-4490-8895-5eca224ce4ec.png">
+* social -> <img width="102" alt="image" src="https://user-images.githubusercontent.com/97180951/156737919-4f5f4fcd-41f2-48be-85e9-470195a8c6f3.png"> 
+
+
 ---
 
 You can now also add redirect links. In this, you provide the link, and then it will open the browser and you can view the webpage. You can provide a url like this.
