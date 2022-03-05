@@ -16,7 +16,9 @@
         app:badgeLabel="This is a sample label"
         app:badgeMessage="This is a sample message"
         app:redirectUrl="links.net"
-        app:logoImage="whatsapp"/>
+        app:logoImage="whatsapp"
+        app:logoBase64="myBase64Image"
+        app:logoWidth="25"/>
 
     <EditText
         android:id="@+id/labelED"
