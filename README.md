@@ -188,7 +188,7 @@ The default colors present in the `BadgeColor` class are:-
 ## Downloading the badge
 
 Also sometimes you might want to save the badge. You can save it the following types
-* Png
+* PNG
 * SVG
  
  Downloading SVG
